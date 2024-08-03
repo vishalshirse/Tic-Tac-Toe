@@ -1,0 +1,65 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #3668ff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+.container{
+    text-align: center;
+    position: relative;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+    position: relative;
+}
+.cell{
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+.cell.x{
+    color: #ff4d4d;
+}
+
+.cell.o{
+    color: #4d4dff;
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: rgb(136, 0, 255);
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover{
+    background-color: rgb(75,2,138);
+}
+
+#status{
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+#winningLine{
+    position: absolute;
+    top: 78px;
+    left: 0;
+    pointer-events: none;
+}
